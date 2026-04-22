@@ -1,0 +1,25 @@
+[package]
+name = "p-peg"
+version = "0.5.0"
+edition = "2021"
+authors = ["Christian R."]
+description = "Pinocchio-based peg stability protocol with on-chain creatures"
+license = "MIT"
+repository = "https://github.com/ChristianJR19/p-peg"
+keywords = ["solana", "pinocchio", "peg", "stablecoin", "creatures"]
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[dependencies]
+pinocchio = { workspace = true, features = ["cpi"] }
+pinocchio-system = { workspace = true }
+pinocchio-token = { workspace = true }
+
+[dev-dependencies]
+solana-sdk = "2.1"
+solana-program-test = "2.1"
+
+[features]
+no-entrypoint = []
+test-sbf = []
