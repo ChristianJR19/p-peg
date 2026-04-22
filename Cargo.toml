@@ -1,0 +1,15 @@
+[workspace]
+resolver = "2"
+members = ["program"]
+
+[workspace.dependencies]
+pinocchio = "0.10"
+pinocchio-system = "0.5"
+pinocchio-token = "0.5"
+
+[profile.release]
+overflow-checks = true
+lto = "fat"
+codegen-units = 1
+opt-level = 3
+incremental = false
